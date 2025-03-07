@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="devfinder">
+      <h2>devfinder</h2>
+      <div id="themeswitch" class="darkmode">
+        <p>DARK</p>
+        <img src="assets/svg/moon.svg" alt="dark" />
+        <img src="assets/svg/sun.svg" alt="light" />
+      </div>
+    </div>
+    <div id="nores" class="search">
+      <input
+        type="text"
+        placeholder="Search Github Username..."
+        class="search-input"
+        id="username" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="search-icon">
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M15.62 17.03a9 9 0 1 1 1.41-1.41l4.68 4.67a1 1 0 0 1-1.42 1.42l-4.67-4.68ZM17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <svg
+        class="x-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M17.3 18.7a1 1 0 0 0 1.4-1.4L13.42 12l5.3-5.3a1 1 0 0 0-1.42-1.4L12 10.58l-5.3-5.3a1 1 0 0 0-1.4 1.42L10.58 12l-5.3 5.3a1 1 0 1 0 1.42 1.4L12 13.42l5.3 5.3Z"></path>
+      </svg>
+      <button id="username" class="search-btn">Search</button>
+    </div>
+    <div id="text" class="box-container"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

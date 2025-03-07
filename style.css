@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", serif;
+  background-color: #f6f8ff;
+}
+
+body.dark-mode {
+  background-color: #141d2f;
+  color: white;
+}
+
+body.dark-mode .devfinder,
+body.dark-mode .search {
+  background-color: #141d2f;
+  color: white;
+}
+
+body.dark-mode .box-container {
+  background-color: #1e2a47;
+  color: white;
+}
+
+body.dark-mode .box-container a {
+  color: white;
+}
+
+body.dark-mode input {
+  background-color: #1e2a47;
+  color: white;
+}
+
+body.dark-mode .search-btn {
+  background-color: #0079ff;
+}
+
+body.dark-mode .darkmode {
+  color: white;
+}
+
+body.dark-mode .info-container {
+  background-color: #141d2f;
+  color: white;
+}
+
+body.dark-mode .info-container h4 {
+  color: white;
+}
+
+body.dark-mode .top-section .name {
+  color: white;
+}
+
+.darkmode {
+  display: flex;
+  gap: 16px;
+  color: #697c9a;
+  cursor: pointer;
+}
+
+.devfinder {
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 730px;
+  padding-bottom: 36px;
+}
+
+.search {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 730px;
+  position: relative;
+}
+
+input {
+  font-family: "Space Mono", serif;
+  height: 69px;
+  width: 100%;
+  border-radius: 15px;
+  border-style: none;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19);
+  padding: 0px 80px;
+}
+
+.nores {
+  color: #f74646;
+}
+
+.search-btn {
+  font-family: "Space Mono", serif;
+  width: 106px;
+  height: 50px;
+  background-color: #0079ff;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+.search-icon,
+.x-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #0079ff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  rotate: 90deg;
+  transition: opacity 0.25s, rotate 0.25s;
+  cursor: pointer;
+}
+
+.search:has(input:placeholder-shown) .search-icon {
+  opacity: 1;
+  rotate: 0deg;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.search:has(input:not(:placeholder-shown)) .x-icon {
+  opacity: 1;
+  rotate: 0deg;
+  visibility: visible;
+  pointer-events: all;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  appearance: none;
+}
+
+.box-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 730px;
+  height: 419px;
+  background-color: white;
+  color: #4b6a9b;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19);
+  margin-top: 24px;
+  padding: 20px;
+}
+
+.box-container a {
+  color: #4b6a9b;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile img {
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  margin: 0 20px 200px 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  opacity: 0.8;
+}
+
+.top-section .name {
+  color: #2b3442;
+  font-size: 26px;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+.bottom-section .username {
+  color: #0079ff;
+}
+
+.info-container {
+  width: 480px;
+  height: 85px;
+  border-radius: 10px;
+  background-color: #f6f8ff;
+  display: flex;
+  justify-content: center;
+  gap: 99px;
+}
+
+.info-container h4 {
+  color: #4b6a9b;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 37px;
+}
+
+.links,
+.linkstwo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links p img,
+.linkstwo p img {
+  margin-right: 16px;
+}
+
+.links p,
+.linkstwo p {
+  display: flex;
+  align-items: center;
+}
