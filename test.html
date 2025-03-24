@@ -1,0 +1,50 @@
+<div class="wrapper">
+  <div class="text-content">
+    <div class="top-section">
+      <img src="${data.avatar_url}" alt="Profile Picture" />
+      <div class="top-text">
+        <p class="name">${data.name || "Not Available"}</p>
+        <p class="username">@${data.login}</p>
+        <p>${data.bio || "No bio available."}</p>
+      </div>
+      <p>Joined ${new Date(data.created_at) .toDateString() .slice(4)}</p>
+    </div>
+    <div class="bottom-section">
+      <div class="info-container">
+        <div class="info">
+          <h4>Repos</h4>
+          <p>${data.public_repos}</p>
+        </div>
+        <div class="info">
+          <h4>Followers</h4>
+          <p>${data.followers}</p>
+        </div>
+        <div class="info">
+          <h4>Following</h4>
+          <p>${data.following}</p>
+        </div>
+      </div>
+      <div class="links-container">
+        <p>
+          <img src="assets/svg/location.svg" alt="location" />
+          ${data.location || "Not Available"}
+        </p>
+        <p>
+          <img src="assets/svg/twitter.svg" alt="twitter" />
+          ${ data.twitter_username ? "@" + data.twitter_username : "Not
+          Available" }
+        </p>
+        <p>
+          <img src="assets/svg/url.svg" alt="url" />
+          <a href="${data.blog}" target="_blank">
+            ${data.blog || "Not Available"}</a
+          >
+        </p>
+        <p>
+          <img src="assets/svg/office.svg" alt="office" />
+          ${data.company || "Not Available"}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

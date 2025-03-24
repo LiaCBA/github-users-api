@@ -22,17 +22,23 @@ username.addEventListener("input", function () {
         }
         text.innerHTML = `
           <div class="wrapper">
-            <div class="profile">
-              <img src="${data.avatar_url}" alt="Profile Picture" />
-            </div>
             <div class="text-content">
-              <div class="top-section">
-                <p class="name">${data.name || "Not Available"}</p>
-                <p>${new Date(data.created_at).toDateString()}</p>
-              </div>
-              <div class="bottom-section">
+               <div class="top-section">
+               <img src="${data.avatar_url}" alt="Profile Picture" />
+               <div class="top-text">
+               <p class="name">${data.name || "Not Available"}</p> 
                 <p class="username">@${data.login}</p>
-                <p>${data.bio || "No bio available."}</p>
+                 <p class="bio-laptop">${data.bio || "No bio available."}</p>
+                 <p class="date-mob">Joined ${new Date(data.created_at)
+                   .toDateString()
+                   .slice(4)}</p>
+                </div>
+                <p class="date-laptop">Joined ${new Date(data.created_at)
+                  .toDateString()
+                  .slice(4)}</p>    
+               </div>
+              <div class="bottom-section">
+              <p class="bio-mob">${data.bio || "No bio available."}</p>
                 <div class="info-container">
                   <div class="info">
                     <h4>Repos</h4>
@@ -47,8 +53,7 @@ username.addEventListener("input", function () {
                     <p>${data.following}</p>
                   </div>
                 </div>
-                <div class="links-container">
-                  <div class="links">
+                    <div class="links-container">
                     <p>
                       <img src="assets/svg/location.svg" alt="location" />
                       ${data.location || "Not Available"}
@@ -59,17 +64,11 @@ username.addEventListener("input", function () {
                         data.twitter_username
                           ? "@" + data.twitter_username
                           : "Not Available"
-                      }
-                    </p>
-                  </div>
-                </div>
-                <div class="linkstwo">
+                      }</p>
                   <p>
                     <img src="assets/svg/url.svg" alt="url" />
-                    <a href="${data.blog}" target="_blank">${
-          data.blog || "Not Available"
-        }</a>
-                  </p>
+                    <a href="${data.blog}" target="_blank">
+                    ${data.blog || "Not Available"}</a></p>
                   <p>
                     <img src="assets/svg/office.svg" alt="office" />
                     ${data.company || "Not Available"}
